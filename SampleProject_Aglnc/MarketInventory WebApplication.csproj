@@ -15,6 +15,10 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Castle.Core" Version="4.4.0" />
+    <PackageReference Include="Castle.Windsor" Version="5.0.1" />
+    <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
+    <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
@@ -45,12 +49,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MarketInventory Repository Interface\MarketInventory Repository Interface.csproj" />
+    <ProjectReference Include="..\MarketInventory Repository\MarketInventory Repository.csproj" />
     <ProjectReference Include="..\MarketInventory Service Interface\MarketInventory Service Interface.csproj" />
     <ProjectReference Include="..\MarketInventory Service\MarketInventory Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\products\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Castle.Windsor.AspDotNetCore.Extensions">
+      <HintPath>Library\Castle.Windsor.AspDotNetCore.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

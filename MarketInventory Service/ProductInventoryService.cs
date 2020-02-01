@@ -8,7 +8,7 @@ using MarketInventory.Service.Models;
 
 namespace MarketInventory.Service
 {
-    class ProductInventoryService : IProductInventoryService
+    public class ProductInventoryService : IProductInventoryService
     {
         private readonly IUnitOfWork UnitOfWork;
 
