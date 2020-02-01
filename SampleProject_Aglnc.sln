@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleProject_Aglnc", "SampleProject_Aglnc\SampleProject_Aglnc.csproj", "{1998B1E3-E969-42D2-A4A4-40DA45459481}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketInventory WebApplication", "SampleProject_Aglnc\MarketInventory WebApplication.csproj", "{1998B1E3-E969-42D2-A4A4-40DA45459481}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{B7E57B26-6F5F-4E5C-AEF3-31D203A8436B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{0B6C9295-C2DB-4F35-8F39-359189F32CB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{405F7A72-0DA3-4682-B5FC-B1D51334D35C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApplication", "WebApplication", "{757E2BD0-75A0-438C-B232-B0F5FF0E8AAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{E0EB28C2-2A34-4E32-9D6D-B4B6BAEA68C2}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MarketInventory Database", "MarketInventory Database\MarketInventory Database.sqlproj", "{92F3E426-E509-40A6-B431-923AD7DDAABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketInventory Repository", "MarketInventory Repository\MarketInventory Repository.csproj", "{7DFA2530-8C44-493A-B37A-5FA054020125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketInventory Repository Interface", "MarketInventory Repository Interface\MarketInventory Repository Interface.csproj", "{ACECFC59-E748-4149-8DAA-824AD150FF2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +31,29 @@ Global
 		{1998B1E3-E969-42D2-A4A4-40DA45459481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1998B1E3-E969-42D2-A4A4-40DA45459481}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1998B1E3-E969-42D2-A4A4-40DA45459481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F3E426-E509-40A6-B431-923AD7DDAABA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7DFA2530-8C44-493A-B37A-5FA054020125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFA2530-8C44-493A-B37A-5FA054020125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFA2530-8C44-493A-B37A-5FA054020125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFA2530-8C44-493A-B37A-5FA054020125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACECFC59-E748-4149-8DAA-824AD150FF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACECFC59-E748-4149-8DAA-824AD150FF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACECFC59-E748-4149-8DAA-824AD150FF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACECFC59-E748-4149-8DAA-824AD150FF2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1998B1E3-E969-42D2-A4A4-40DA45459481} = {757E2BD0-75A0-438C-B232-B0F5FF0E8AAE}
+		{92F3E426-E509-40A6-B431-923AD7DDAABA} = {B7E57B26-6F5F-4E5C-AEF3-31D203A8436B}
+		{7DFA2530-8C44-493A-B37A-5FA054020125} = {0B6C9295-C2DB-4F35-8F39-359189F32CB9}
+		{ACECFC59-E748-4149-8DAA-824AD150FF2B} = {0B6C9295-C2DB-4F35-8F39-359189F32CB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97343A4D-9444-4CE5-987E-1CBD25F975FF}
