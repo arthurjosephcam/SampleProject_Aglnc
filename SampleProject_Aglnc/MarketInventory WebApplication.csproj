@@ -40,8 +40,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\serviceLayer\Objects.ts" />
+    <None Remove="ClientApp\src\app\serviceLayer\ServiceApi.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MarketInventory Service Interface\MarketInventory Service Interface.csproj" />
     <ProjectReference Include="..\MarketInventory Service\MarketInventory Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\products\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\serviceLayer\Objects.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\serviceLayer\ServiceApi.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
