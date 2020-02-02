@@ -8,8 +8,8 @@ namespace MarketInventory.WebApplication.Models
 {
     public enum SortType
     {
-        Name,
-        Price,
-        Quantity
+        Name=1,
+        Price=2,
+        Quantity=3
     }
 }

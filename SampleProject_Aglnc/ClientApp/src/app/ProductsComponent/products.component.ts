@@ -20,7 +20,8 @@ export class ProductsComponent
 
   ngOnInit()
   {
-    this.getAllProducts();
+    //this.getAllProducts();
+    this.getProductsSortedByName();
   }
 
   getAllProducts()
@@ -28,6 +29,39 @@ export class ProductsComponent
     this.serviceApi.getAllProducts().subscribe(result =>
     {
       this.products = result as Agilence.ProductInventory[] ;
+    }, error => console.error(error));
+  }
+
+
+  WriteIt(whatToWrite: string)
+  {
+    console.log(whatToWrite);
+  }
+
+  getProductsSortedByPrice()
+  {
+    this.getProductsSorted(Agilence.SortType.Price);
+
+  }
+
+  getProductsSortedByName()
+  {
+    this.getProductsSorted(Agilence.SortType.Name);
+
+  }
+
+  getProductsSortedByQuantity()
+  {
+    this.getProductsSorted(Agilence.SortType.Quantity);
+  }
+
+
+  getProductsSorted(sortedBy : Agilence.SortType)
+  {
+    this.products = undefined;
+    this.serviceApi.getProductsSorted(sortedBy).subscribe(result =>
+    {
+      this.products = result as Agilence.ProductInventory[];
     }, error => console.error(error));
   }
 }

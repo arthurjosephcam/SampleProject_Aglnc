@@ -26,4 +26,11 @@ export class AgilenceService
   }
 
 
+  getProductsSorted(sortType: Agilence.SortType)
+  {
+    var ret = this.http.get(this.baseUrl + 'api/ProductInventory/GetProductsSorted?sortedBy=' + sortType);
+    return ret;
+  }
+
+
 }

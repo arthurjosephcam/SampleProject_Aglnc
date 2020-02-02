@@ -31,10 +31,39 @@ namespace MarketInventory.Repository
 
         public async Task<IEnumerable<ProductInventory>> GetProductsSorted(SortType sortedBy)
         {
-            return await Context.Products
+            switch (sortedBy)
+            {
+                case SortType.Name:
+                    return await Context.Products
+                        .OrderBy(r => r.ProductName)
+                        .Skip(0)
+                        .Take(5)
+                        .AsNoTracking()
+                        .ToArrayAsync()
+                ;
+                case SortType.Price:
+                    return await Context.Products
+                       .OrderBy(r => r.Price)
+                       .Skip(0)
+                       .Take(5)
+                       .AsNoTracking()
+                       .ToArrayAsync()
+               ;
+                case SortType.Quantity:
+                    return await Context.Products
+                      .OrderBy(r => r.InventoryQuantity)
+                      .Skip(0)
+                      .Take(5)
+                      .AsNoTracking()
+                      .ToArrayAsync();
+                default:
+                    return await Context.Products
                  .AsNoTracking()
                  .ToArrayAsync()
                  ;
+            }
+
+           
         }
 
         public async Task<ProductInventory> GetProductsByProductId(int ProductId)

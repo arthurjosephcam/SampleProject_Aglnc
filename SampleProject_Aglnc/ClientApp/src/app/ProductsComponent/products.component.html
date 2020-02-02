@@ -7,15 +7,15 @@
 <table class='table table-striped' *ngIf="products">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Name. (C)</th>
-      <th>Quantity. (F)</th>
-      <th>Price</th>
+
+      <th (click)="getProductsSortedByName()">Name</th>
+      <th (click)="getProductsSortedByQuantity()">Quantity</th>
+      <th (click)="getProductsSortedByPrice()">Price</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td class="text-harper">{{ product.productId }}</td>
+
       <td class="text-harper">{{ product.productName }}</td>
       <td  [ngClass]="(product.inventoryQuantity > 3)?'text-danger':'text-harper'">{{ product.inventoryQuantity }}</td>
       <td class="text-harper">{{ product.price }}</td>
