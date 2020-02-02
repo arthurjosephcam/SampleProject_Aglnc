@@ -1,4 +1,4 @@
-<h1>Agilence Products</h1>
+<h1>Products</h1>
 
 
 
@@ -8,9 +8,9 @@
   <thead>
     <tr>
 
-      <th (click)="getProductsSortedByName()">Name</th>
-      <th (click)="getProductsSortedByQuantity()">Quantity</th>
-      <th (click)="getProductsSortedByPrice()">Price</th>
+      <th  (click)="getProductsSortedByName()"><span class="pointer"> <i [ngClass]="(sortedBy=='Name')?'pi pi-sort-down' :'pi pi-sort'"></i>Name</span> </th>
+      <th  (click)="getProductsSortedByQuantity()"><span class="pointer"><i [ngClass]="(sortedBy=='Quantity')?'pi pi-sort-down' :'pi pi-sort'"></i>Quantity</span></th>
+      <th  (click)="getProductsSortedByPrice()"><span class="pointer"><i [ngClass]="(sortedBy=='Price')?'pi pi-sort-down' :'pi pi-sort'"></i>Price</span></th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +18,7 @@
 
       <td class="text-harper">{{ product.productName }}</td>
       <td  [ngClass]="(product.inventoryQuantity > 3)?'text-danger':'text-harper'">{{ product.inventoryQuantity }}</td>
-      <td class="text-harper">{{ product.price }}</td>
+      <td class="text-harper">{{ product.price | currency : "USD" }}</td>
     </tr>
   </tbody>
 </table>

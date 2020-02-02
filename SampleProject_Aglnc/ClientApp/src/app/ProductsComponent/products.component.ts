@@ -10,6 +10,7 @@ import { AgilenceService } from '../serviceLayer/ServiceApi'
 export class ProductsComponent
 {
   public products: Agilence.ProductInventory[];
+  public sortedBy: string = 'Name';
 
   constructor(
     private serviceApi: AgilenceService
@@ -40,18 +41,23 @@ export class ProductsComponent
 
   getProductsSortedByPrice()
   {
+    this.sortedBy = 'Price';
     this.getProductsSorted(Agilence.SortType.Price);
 
   }
 
   getProductsSortedByName()
   {
+    this.sortedBy = 'Name';
+
     this.getProductsSorted(Agilence.SortType.Name);
 
   }
 
   getProductsSortedByQuantity()
   {
+    this.sortedBy = 'Quantity';
+
     this.getProductsSorted(Agilence.SortType.Quantity);
   }
 
