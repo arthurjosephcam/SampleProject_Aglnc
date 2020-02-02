@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+.text-harper {
+  color: #01a7dc !important;
+}
+
+.text-harper-dark {
+  color: #005089 !important;
+}
+
+.text-harper-title {
+  color: #005089 !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+

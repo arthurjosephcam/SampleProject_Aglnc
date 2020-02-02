@@ -15,10 +15,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{ product.productId }}</td>
-      <td>{{ product.productName }}</td>
-      <td>{{ product.inventoryQuantity }}</td>
-      <td>{{ product.price }}</td>
+      <td class="text-harper">{{ product.productId }}</td>
+      <td class="text-harper">{{ product.productName }}</td>
+      <td  [ngClass]="(product.inventoryQuantity > 3)?'text-danger':'text-harper'">{{ product.inventoryQuantity }}</td>
+      <td class="text-harper">{{ product.price }}</td>
     </tr>
   </tbody>
 </table>

@@ -7,17 +7,13 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductsComponent } from './ProductsComponent/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
+    HomeComponent, //I left it here, could be used but you expected to see only one page, so no navigation needed.
     ProductsComponent
   ],
   imports: [
@@ -26,8 +22,8 @@ import { ProductsComponent } from './ProductsComponent/products.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductsComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      //{ path: 'counter', component: CounterComponent },
+      //{ path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
   providers: [],
